@@ -27,13 +27,13 @@ describe '#piglatinize' do
 
   it 'should translate a sentence including white spaces' do
     translations = []
-    vowels_translations.each { |tr| translations << "#{tr} agonway" }
+    vowels_translations.each { |v_translation| translations << "#{v_translation} agonway" }
     expect(translations).to include piglatinize('eat wagon')
   end
 
   it 'should translate any sentence with special characters' do
     translations = []
-    vowels_translations.each { |tr| translations << "#{tr}, agonway!!" }
+    vowels_translations.each { |v_translation| translations << "#{v_translation}, agonway!!" }
     expect(translations).to include piglatinize('eat, wagon!!')
   end
 end
