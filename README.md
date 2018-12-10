@@ -1,29 +1,30 @@
 ## Background & Objectives
 
-You are having a drink with a french entrepreneur and he tells you 'I've this great idea: I want to get people speaking louchebem again!' Now you have to help him 😊
+You are having a drink with an old American entrepreneur talking about your next billion-dollar idea. Suddenly you notice two malicious French guys sitting next to you seem to be listening and taking notes. To keep the conversation private, your American friend suggests you to switch to good old Pig-Latin.😊
 
 ### A bit of research
 
-* Louchébem is a type of French slang that was originally spoken by Parisian butchers. Read [this article](https://en.wikipedia.org/wiki/Louch%C3%A9bem) to find out a bit more about it.
-* Very simply, you take a normal English word like **'PATRON'**. You take the first consonant group (letters before the first vowel), and replace it with an 'L'. Then, you put that first consonant group at the end of the word, followed by one of the louchebem suffixes, e.g. -EM. **So 'PATRON' becomes 'LATRONPEM'.** Easy right? 😉
-* Ask yourself what the main issues are going to be when building your translator (choice of the final suffix, how to handle beginning of words, what the different scenarios are for a given word in input...)
+* Pig-Latin is an old type of English slang. Read [this article](https://en.wikipedia.org/wiki/Pig_Latin) to find out a bit more about it.
+* Very simply, you take a normal English word like **'HELLO'**. You take the first consonant group (letters before the first vowel) and you put that first consonant group at the end of the word, followed by the suffixe -ay. **So 'HELLO' becomes 'OLLEHAY'.**
+* If the word starts with a vowel, you don't change it but add one of the following suffixes at the end: ay, way, hay, nay, yay. **So 'EAT' becomes 'EATWAY' or 'EATHAY' for instance.** Easy right? 😉
+* Ask yourself what the main issues are going to be when building your translator (choice of the suffix, how to handle beginning of words, what the different scenarios are for a given word in input...)
 
 ### Write the pseudo-code
 
 Pseudocode is primarily used to communicate the essence of an algorithm without getting bogged down in language-specific syntax. A good programmer can take well-written pseudocode and translate it into functional code in the language of his choice.
 
-* Write the pseudo-code for you louchebem translator.
-* Start small with a program that can only translate a single french word in louchebem
+* Write the pseudo-code for you piglatin translator.
+* Start small with a program that can only translate a single English word in piglatin
 * Then try to extend it to sentences.
 
-Did you know that popular French expressions like 'larfeuille', 'loufiah', 'loucedé', or 'loufoque' are louchébem expressions?
+Two Pig Latin words that have entered into mainstream American English are "ixnay" or "icksnay", the Pig Latin version of "nix" (itself a borrowing of German nichts[7]), which is used as a general negative; and "amscray", Pig Latin for "scram", meaning "go away" or "get out of here"
 
 ## Specs
 
 - **constraint**: any one-letter words like 'a' should not be translated
-- **constraint**: for words beginning with consonants ('chat', 'trou'), you'll have to take the first *consonant group* (all the letters before the first vowel) and put it at the end, add an `l` to the start of the word and add a suffix at the end ('chat' should give 'latchem', or 'latchoc')
-- **constraint**: words beginning with a vowel are not changed but you should still add an `l` to the start of the word and a suffix at the end ('atout' should give 'latoutoc' or  'latoutic')
-- **constraint**: the random suffix should be one of these: `['em', 'é', 'ji', 'oc', 'ic', 'uche', 'ès']`
+- **constraint**: for words beginning with consonants ('beer', 'wine'), you'll have to take the first *consonant group* (all the letters before the first vowel) and put it at the end and add the suffix 'ay' at the end ('wagon' should give 'agonway')
+- **constraint**: words beginning with a vowel are not changed but you should still add a random suffix at the end ('always' should give 'alwaysway' or  'alwayshay' for instance)
+- **constraint**: the random suffix for words beginning with a vowel should be one of these: `['ay', 'way', 'hay', 'nay', 'yay']`
 - **enhancement**: ideally your program should be able to translate any complicated sentence, regardless of punctuation
 
 ## Further suggestions & resources

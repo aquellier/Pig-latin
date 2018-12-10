@@ -1,14 +1,19 @@
 require 'piglatin'
 
 describe '#piglatinize' do
+
   let(:vowels_translations) { %w[eatway eatay eathay eatyay eatnay] }
   let(:translations_pairs) { vowels_translations.product('wagon') }
+
+  it 'should return a string' do
+    expect(piglatinize('')).to be_a String
+  end
 
   it 'should not translate one-letter words' do
     expect(piglatinize('p')).to eq 'p'
   end
 
-  it 'should handle words beignning with a vowel' do
+  it 'words beginning with a vowel should end with one of the following suffixes: ay way hay yay nay' do
     expect(vowels_translations).to include piglatinize('eat')
   end
 

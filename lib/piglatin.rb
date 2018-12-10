@@ -18,7 +18,7 @@ def piglatinize(sentence)
   piglatinized = []
   words = sentence.split(/\b/)
   words.each do |word|
-    if word =~ /\W/
+    if word.match?(/\W/)
       piglatinized << word
     else
       piglatinized << piglatinize_word(word)
@@ -26,5 +26,3 @@ def piglatinize(sentence)
   end
   piglatinized.join
 end
-
-p piglatinize('eat')
